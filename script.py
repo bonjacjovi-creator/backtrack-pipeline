@@ -8,7 +8,7 @@ import gmpy2
 from huggingface_hub import HfApi, snapshot_download
 
 # ---------------- CREDENTIALS & HUGGING FACE WORKSPACE CONFIG ----------------
-HF_TOKEN = os.getenv("HF_TOKEN", "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")
+HF_TOKEN = os.getenv("HF_TOKEN", "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")
 HF_USERNAME = os.getenv("HF_USERNAME", "BonJac")
 DATA_REPO_NAME = os.getenv("DATA_REPO_NAME", "Main3")
 
