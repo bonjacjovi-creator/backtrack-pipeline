@@ -8,7 +8,10 @@ import gmpy2
 from huggingface_hub import HfApi, snapshot_download
 
 # ---------------- CREDENTIALS & HUGGING FACE WORKSPACE CONFIG ----------------
-HF_TOKEN = os.getenv("HF_TOKEN", "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")
+HF_TOKEN = os.getenv("HF_TOKEN")
+if not HF_TOKEN:
+    raise RuntimeError("Missing HF_TOKEN environment variable. Set it before starting script.py.")
+
 HF_USERNAME = os.getenv("HF_USERNAME", "BonJac")
 DATA_REPO_NAME = os.getenv("DATA_REPO_NAME", "Main3")
 
